@@ -1,0 +1,98 @@
+/* About Page Stylesheet */
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #00274D; /* Dark Blue */
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: black; /* Black */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00FF00; /* Green hover */
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00FF00; /* Red */
+    animation: bounceIn 2s ease-in;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #00FF00; /* Green */
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    max-width: 800px;
+    animation: slideIn 1.8s ease;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Hover Effects for Text */
+h2:hover {
+    color: #FF3B3F; /* Green on hover */
+    transition: color 0.3s ease;
+}
+
+h3:hover {
+    color: #FF3B3F; /* Red on hover */
+    transition: color 0.3s ease;
+}

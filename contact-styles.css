@@ -1,0 +1,125 @@
+/* Contact Page Stylesheet */
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #00274D; /* Dark Blue */
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: black; /* Black */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00FF00; /* Green hover */
+}
+
+/* Contact Form Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF3B3F; /* Red */
+    animation: bounceIn 2s ease-in;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    animation: slideIn 2s ease;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: black; /* Black */
+    color: white;
+    animation: fadeInUp 1.8s ease;
+    transition: transform 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border: 2px solid #00FF00; /* Green focus */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #FF3B3F; /* Red */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    animation: rotateIn 2s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00FF00; /* Green on hover */
+    transform: scale(1.1);
+}
+
+form input:hover, form textarea:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-360deg); }
+    to { transform: rotate(0deg); }
+}
